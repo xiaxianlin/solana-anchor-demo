@@ -1,7 +1,6 @@
 import * as anchor from '@coral-xyz/anchor'
 import { Program } from '@coral-xyz/anchor'
 import { SolanaAnchorDemo } from '../target/types/solana_anchor_demo'
-import BN from 'bn.js'
 
 describe('solana-anchor-demo', () => {
     // Configure the client to use the local cluster.
