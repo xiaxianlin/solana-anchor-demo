@@ -36,7 +36,7 @@ describe('anchor-movie-review', () => {
 
         const tx = await program.methods
             .addMovieReview(movie.title, movie.description, movie.rating)
-            .accounts({ tokenAccount: tokenAccount })
+            .accounts({ tokenAccount })
             .rpc()
 
         const account = await program.account.movieAccountState.fetch(moviePda)
