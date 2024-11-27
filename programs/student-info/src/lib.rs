@@ -4,7 +4,7 @@ use anchor_spl::{
     token::{Mint, Token, TokenAccount},
 };
 
-declare_id!("EuD6qQyMPmdjTem7HsKtHAuQcmfNJZ8vsWC8S6fBAc9m");
+declare_id!("GtjERV4BsnvPzamnWjDE3gVsbqPYTLYkUZw44GeSYKpD");
 
 const PUBKEY_SIZE: usize = 32;
 const ANCHOR_DISCRIMINATOR: usize = 8;

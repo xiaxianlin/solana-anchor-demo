@@ -9,7 +9,7 @@ pub use constants::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("3nTxUJNd4c3WHNa87KksfJJ1JBtSHJXWhvddBMRkVfLk");
+declare_id!("9jHs1BJrP8pHpnwQYF5gzFJPQYNcrgN8vy9ZAW7bh5EG");
 
 #[program]
 pub mod burry_escrow {
