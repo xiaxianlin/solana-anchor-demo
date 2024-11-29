@@ -8,6 +8,8 @@ skip-lint = false
 anchor-counter = "BKGaYK3AYqhtYHLG3WmhvY69Lbg8p9aUodpVdcMrgezc"
 anchor-movie-review = "76exkBtD2k2KBqB7Q61rbw73bcGVSn9tY8RW5U4JhQi2"
 burry-escrow = "3nTxUJNd4c3WHNa87KksfJJ1JBtSHJXWhvddBMRkVfLk"
+counter = "BHCdq3aBucjgUrs7NyQReVind6KBKhzQgKch77Y3ovrp"
+guess-number = "4nREXZh5dakdcmMHBksE42dPhRCEWk18AefrjQdLdDqg"
 solana_anchor_demo = "AuYsn8ts1aR9zo9EoVCDrqPqSrSSRFTTdjYtWsihdVhm"
 student-info = "EuD6qQyMPmdjTem7HsKtHAuQcmfNJZ8vsWC8S6fBAc9m"
 
@@ -21,22 +23,22 @@ wallet = "~/.config/solana/id.json"
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 "
 
-[test]
-startup_wait = 10000
-shutdown_wait = 2000
-upgradeable = false
+# [test]
+# startup_wait = 10000
+# shutdown_wait = 2000
+# upgradeable = false
 
-[test.validator]
-bind_address = "0.0.0.0"
-url = "https://api.devnet.solana.com"
-ledger = ".anchor/test-ledger"
-rpc_port = 8899
+# [test.validator]
+# bind_address = "0.0.0.0"
+# url = "https://api.devnet.solana.com"
+# ledger = ".anchor/test-ledger"
+# rpc_port = 8899
 
-[[test.validator.clone]] # switchboard-solana devnet programID
-address = "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f"
+# [[test.validator.clone]]
+# address = "SW1TCH7qEPTdLsDHRgPuMQjbQxKdH2aBStViMFnt64f"
 
-[[test.validator.clone]] # switchboard-solana devnet IDL
-address = "Fi8vncGpNKbq62gPo56G4toCehWNy77GgqGkTaAF5Lkk"
+# [[test.validator.clone]]
+# address = "Fi8vncGpNKbq62gPo56G4toCehWNy77GgqGkTaAF5Lkk"
 
-[[test.validator.clone]] # switchboard-solana SOL/USD Feed
-address = "GvDMxPzN1sCj7L26YDK2HnMRXEQmQ2aemov8YBtPS7vR"
+# [[test.validator.clone]]
+# address = "GvDMxPzN1sCj7L26YDK2HnMRXEQmQ2aemov8YBtPS7vR"
