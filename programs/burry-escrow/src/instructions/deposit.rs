@@ -13,9 +13,9 @@ pub struct Deposit<'info> {
         seeds = [ESCROW_SEED, user.key().as_ref()],
         bump,
         payer = user,
-        space = DISCRIMINATOR_SIZE + Escrow::INIT_SPACE
+        space = DISCRIMINATOR_SIZE + EscrowState::INIT_SPACE
     )]
-    pub escrow_account: Account<'info, Escrow>,
+    pub escrow_account: Account<'info, EscrowState>,
 
     pub system_program: Program<'info, System>,
 }
@@ -23,11 +23,12 @@ pub struct Deposit<'info> {
 pub fn deposit_handler(ctx: Context<Deposit>, escrow_amount: u64, unlock_price: f64) -> Result<()> {
     msg!("Depositing funds in escrow...");
 
-    let escrow = &mut ctx.accounts.escrow_account;
-    escrow.unlock_price = unlock_price;
-    escrow.escrow_amount = escrow_amount;
+    let escrow_state = &mut ctx.accounts.escrow_account;
+    escrow_state.unlock_price = unlock_price;
+    escrow_state.escrow_amount = escrow_amount;
+    escrow_state.out_of_jail = false;
 
-    let transfer_instruction = transfer(&ctx.accounts.user.key(), &escrow.key(), escrow_amount);
+    let transfer_instruction = transfer(&ctx.accounts.user.key(), &escrow_state.key(), escrow_amount);
 
     invoke(
         &transfer_instruction,

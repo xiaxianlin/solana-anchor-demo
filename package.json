@@ -13,6 +13,7 @@
         "@solana-developers/helpers": "^2.5.6",
         "@solana/spl-token": "^0.4.9",
         "@switchboard-xyz/common": "^2.5.4",
+        "@switchboard-xyz/on-demand": "^1.2.51",
         "@switchboard-xyz/solana.js": "^3.2.5"
     },
     "devDependencies": {

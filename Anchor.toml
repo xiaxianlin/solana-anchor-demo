@@ -13,6 +13,7 @@ guess-number = "4nREXZh5dakdcmMHBksE42dPhRCEWk18AefrjQdLdDqg"
 nft-demo = "DvNwWuDZKRdvZaXFjaM2om82uCFPtDqK8tkUKWUd6jkP"
 solana_anchor_demo = "AuYsn8ts1aR9zo9EoVCDrqPqSrSSRFTTdjYtWsihdVhm"
 student-info = "EuD6qQyMPmdjTem7HsKtHAuQcmfNJZ8vsWC8S6fBAc9m"
+switchboard-demo = "BAs2AN5NU5NwcNAo2w9qaMFWdeZzXP6k3tn88nzPny82"
 
 [registry]
 url = "https://api.apr.dev"
